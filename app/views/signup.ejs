@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            signup
+        </title>
+        <link href="/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <div class="container mx-auto mt-4">
+            <%if(messages.error){%>
+                <div class="alert alert-danger" role="alert">
+                    <%- messages.error%>
+                  </div>
+            <%}%>
+            <%if(messages.success){%>
+                <div class="alert alert-success" role="alert">
+                    <%- messages.success%>
+                  </div>
+            <%}%>
+        <form method="post" action="/signup" class="row">  
+        <div class="input-group mb-3">
+        
+            <input class="input-control col-12" name="username" type="text" placeholder="user name">
+        </div>
+        <div class="input-group mb-3">
+     
+            <input class="input-control col-12" name="email" type="email" placeholder="email">
+        </div>
+        <div class="input-group mb-3">
+          
+            <input class="input-control col-12" name="password" type="password" placeholder="password">
+        </div>
+        <div class="input-group mb-3">
+       
+            <input class="input-control col-12" name="passwordConfirm" type="password" placeholder="confirm password">
+        </div>
+        <div class="input-group mb-3">
+      
+            <input class="input-control col-12" name="phone" type="text" placeholder="phone number">
+        </div>
+        <button type="submit" class="btn btn-primary">signup</button>
+        </form>
+        </div>
+    </body>
+</html>

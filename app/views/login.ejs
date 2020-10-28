@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            signin
+        </title>
+        <link href="/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <div class="container mx-auto mt-4">
+            <%if(messages.error){%>
+                <div class="alert alert-danger" role="alert">
+                    <%- messages.error%>
+                  </div>
+            <%}%>
+            <%if(messages.success){%>
+                <div class="alert alert-success" role="alert">
+                    <%- messages.success%>
+                  </div>
+            <%}%>
+        <form method="post" action="/signin" class="row">  
+        <div class="input-group mb-3">
+        
+            <input class="input-control col-12" name="username" type="text" placeholder="user name">
+        </div>
+        
+        <div class="input-group mb-3">
+          
+            <input class="input-control col-12" name="password" type="password" placeholder="password">
+        </div>
+       
+        
+        <button type="submit" class="btn btn-primary">signin</button>
+        </form>
+        </div>
+    </body>
+</html>
