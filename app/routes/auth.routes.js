@@ -15,14 +15,14 @@ module.exports = function(app)
         next();
 
     });
-    app.post("/singup",
+    app.post("/signup",
     [  
         verifySignUp.checkRolesExisted
     ],
     controller.signup
     );
     app.post("/signin", controller.signin);
-    app.get("/signup", controller.getsignup);
+    app.get("/singup", controller.getsignup);
     app.get("/signin", controller.getsignin);
     app.get("/signout", controller.signout);
 }
