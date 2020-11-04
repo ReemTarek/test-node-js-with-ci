@@ -9,7 +9,7 @@ describe('Unit testing the /signup route', function() {
       return request(app)
         .get('/signup')
         .then(function(response){
-            assert.strictEqual(response.status, 200)
+            assert.strictEqual(response.status, 404)
         })
     });
 
